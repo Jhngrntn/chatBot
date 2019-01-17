@@ -2,10 +2,9 @@ var index = 0;
 var ind = 0;
 var tester = false;
 
-
 $(document).ready(function() {
 	
-	// BASIC OPERATIONS
+	//  BASIC OPERATIONS
 	function clear() {
 		$('input').val('');
 	}
@@ -20,11 +19,7 @@ $(document).ready(function() {
 		$(".output").stop().animate({ scrollTop: $(".output")[0].scrollHeight}, 1000);
 	}
 	
-	//	PRESETS
-	clear();
-	disableInput();
-	
-	// THE MAIN WRITING FUNCTION
+	//  THE MAIN WRITING FUNCTION
 	function write(arr) {
 		scrolly();
 		$("<p>" + arr[index] + "</p>").hide().appendTo(".output").fadeIn(2000, function(){
@@ -39,7 +34,7 @@ $(document).ready(function() {
 		});
 	}
 	
-	// WRITTEN COMMANDS FUNCTION
+	//  WRITTEN COMMANDS FUNCTION
 	$('input').keypress(function(e) {
 		if(e.which == 13) {
 			e.preventDefault();
@@ -66,7 +61,11 @@ $(document).ready(function() {
 		}
 	});
 	
-	//START
+	//	PRESETS
+	clear();
+	disableInput();
+	
+	//  START FUNCTION
 	function devStart() {
 		write(firstGreeting);
 	}
@@ -98,5 +97,3 @@ var dontknow = [
 var greeting = [
 	"Hello there. It is nice to meet you."
 ]
-
-
