@@ -1,4 +1,3 @@
-var arr;
 var index = 0;
 var ind = 0;
 var tester = false;
